@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import NavigationBar from './components/NavigationBar.jsx';
+import NavigationBar from './Components/NavigationBar.jsx';
 
 
 import Faculty from "./pages/Faculty";
