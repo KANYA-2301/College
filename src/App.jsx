@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavigationBar from './Components/NavigationBar.jsx';
 
 import Faculty from "./pages/Faculty";
@@ -13,7 +13,7 @@ import ErrorPage from "./pages/Error";
 
 const App = () => {
   return (
-    <Router>
+    <>
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Faculty />} />
@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/single-post" element={<SinglePost />} />
         <Route path="/error" element={<ErrorPage />} />
       </Routes>
-    </Router>
+    </>
   );
 };
 
