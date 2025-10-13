@@ -5,7 +5,7 @@ const Map = () => {
     <div>
       <div className='bg-[#8e44ad] flex flex-col md:flex-row items-center md:justify-around px-4 py-12 mt-20 mb-20'>
               <div className='w-full md:w-1/2'>
-                 <img src={map} className='w-full h-auto'></img>
+                 <img src={map} className='w-full h-auto' alt="campus map"></img>
               </div>
               <div  className='text-white w-full md:w-1/2  mt-8 md:mt-0'>
                 <p className='border border-white p-2 inline-block mb-4'>Acadrova by Number</p>

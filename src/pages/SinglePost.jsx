@@ -22,11 +22,11 @@ const SinglePost = () => {
   ]
 
   const post = [
-    { img: p1, descripton: "Building Future Success: Essential Skills for University and Beyond", date: "June 5, 2023", comment: "No Comments" },
-    { img: p2, descripton: "How Schools are Transforming Education for the Future", date: "June 5, 2023", comment: "No Comments" },
-    { img: p3, descripton: "Empowering Students for Success in the Modern World", date: "June 5, 2023", comment: "No Comments" },
-    { img: p4, descripton: "Exploring the Value of a Holistic Education Approach", date: "June 5, 2023", comment: "No Comments" },
-    { img: p5, descripton: "A Comprehensive Guide to Navigating the Road to Higher Education", date: "June 5, 2023", comment: "No Comments" }
+    { img: p1, description: "Building Future Success: Essential Skills for University and Beyond", date: "June 5, 2023", comment: "No Comments" },
+    { img: p2, description: "How Schools are Transforming Education for the Future", date: "June 5, 2023", comment: "No Comments" },
+    { img: p3, description: "Empowering Students for Success in the Modern World", date: "June 5, 2023", comment: "No Comments" },
+    { img: p4, description: "Exploring the Value of a Holistic Education Approach", date: "June 5, 2023", comment: "No Comments" },
+    { img: p5, description: "A Comprehensive Guide to Navigating the Road to Higher Education", date: "June 5, 2023", comment: "No Comments" }
   ]
 
   const socialmedia = ["Facebook", "Twitter", "LinkedIn", "Pinterest"]
@@ -122,9 +122,9 @@ const SinglePost = () => {
             <div className="space-y-4">
               {post.map((item, index) => (
                 <div key={index} className="flex gap-3 items-start">
-                  <img src={item.img} alt={item.descripton} className="w-16 h-16 object-cover" />
+                  <img src={item.img} alt={item.description} className="w-16 h-16 object-cover" />
                   <div>
-                    <p className="font-semibold text-sm sm:text-base">{item.descripton}</p>
+                    <p className="font-semibold text-sm sm:text-base">{item.description}</p>
                     <p className="text-xs text-gray-600">{item.date} • {item.comment}</p>
                   </div>
                 </div>
