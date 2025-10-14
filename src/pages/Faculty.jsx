@@ -74,7 +74,7 @@ const Faculty = () => {
       </div>
       <Map/>
       <div>
-        <p className='text-center border p-1 w-35 ml-190'>Why Choose Us</p>
+        <p className='text-center border p-1 w-35 md:ml-190 '>Why Choose Us</p>
         <p className='text-center text-3xl font-bold mt-5'>Why choose Acadrova University?</p>
         <p className='text-center mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec<br/> ullamcorper mattis, pulvinar dapibus leo.</p>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between gap-5 p-8 mt-10'>
