@@ -3,7 +3,7 @@ import Labimg from "../assets/Labimg.jpg";
 import DepartmentContact from "./DepartmentContact";
 import NothingBeast from "./NothingBeast";
 import AchievingPage from "./AchievingPage";
-import Footer from "./Footer";
+import Footer from '../Components/Footer'
 
 const AcademicDetail = () => {
   return (

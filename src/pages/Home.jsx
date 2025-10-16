@@ -12,7 +12,7 @@ import OurTeacher from './OurTeacher';
 import AchievingPage from './AchievingPage';
 import FAQPage from './FAQPage';
 import NothingBeast from './NothingBeast';
-import Footer from './Footer';
+import Footer from '../Components/Footer'
 
 const ApplyPage = () => {
   return (

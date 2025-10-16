@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaGreaterThan } from "react-icons/fa6";
 import bg2 from '../assets/bg2.jpg'
-import Footer from './Footer';
+import Footer from '../Components/Footer'
 import CampusIntro from './CampusIntro';
 import VisionMission from './VisionMission';
 import Map from './Map'
@@ -22,6 +22,7 @@ const Academics = () => {
       <AchievingPage/>
       </div>
       <Footer/>
+      
     </div>
   )
 }

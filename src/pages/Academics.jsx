@@ -1,10 +1,11 @@
 import React from 'react'
 import { FaGreaterThan } from "react-icons/fa6";
 import Academicsimg from '../assets/Academicsimg.png';
-import Footer from './Footer';
+import Footer from '../Components/Footer'
 import Degree from './Degree'
 import OurAcademics from './OurAcademics';
 import NothingBeast from './NothingBeast';
+import EnterToLearn from './EntertoLearn';
 
 const Academics = () => {
   return (
@@ -17,6 +18,7 @@ const Academics = () => {
       <OurAcademics/>
       <Degree/>
       <NothingBeast/>
+      <EnterToLearn/>
       <Footer/>
     </div>
   )
