@@ -5,7 +5,12 @@ import { IoMdSearch } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaLocationDot, FaClock } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import {FaFacebookF,FaTwitter,FaInstagram,FaLinkedinIn,} from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
@@ -32,8 +37,10 @@ const NavigationBar = () => {
 
   return (
     <div className="w-full">
-      <div className="bg-gradient-to-r from-[#8e44ad] to-[#401f4e] flex justify-between items-center px-4 py-2 text-sm sm:text-base">
-        <div className="hidden sm:flex flex-row gap-5 text-white">
+      {/* Top bar */}
+      <div className="bg-gradient-to-r from-[#8e44ad] to-[#401f4e] flex justify-between items-center px-4 py-2 text-sm md:text-base">
+        {/* Contact info (hidden below lg) */}
+        <div className="hidden lg:flex flex-row gap-5 text-white">
           <div className="flex items-center gap-1">
             <FaLocationDot /> (+62)21-2002-2012
           </div>
@@ -44,19 +51,26 @@ const NavigationBar = () => {
             <FaClock /> Mon - Fri : 09.00-17.00
           </div>
         </div>
-        <div className="flex gap-4 text-white text-lg justify-center w-full sm:w-auto">
+
+        {/* Social icons (always visible) */}
+        <div className="flex gap-4 text-white text-lg justify-center w-full lg:w-auto">
           <FaFacebookF />
           <FaInstagram />
           <FaLinkedinIn />
           <FaTwitter />
         </div>
       </div>
-      <div className="p-4 sm:p-5 shadow-xl relative">
-        <div className="flex justify-between items-center sm:justify-between sm:items-center">
+
+      {/* Main nav */}
+      <div className="p-4 lg:p-5 shadow-xl relative">
+        {/* Logo + Hamburger (mobile & tablet) */}
+        <div className="flex justify-between items-center lg:justify-between lg:items-center">
           <Link to="/">
-            <img src={logo} className="w-32 sm:w-40" alt="logo" />
+            <img src={logo} className="w-32 lg:w-40" alt="logo" />
           </Link>
-          <div className="sm:hidden">
+
+          {/* Hamburger (only below lg) */}
+          <div className="lg:hidden">
             <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               {menuOpen ? (
                 <IoMdClose size={30} className="cursor-pointer" />
@@ -66,10 +80,12 @@ const NavigationBar = () => {
             </button>
           </div>
         </div>
+
+        {/* Links */}
         <ul
           className={`${
             menuOpen ? "flex" : "hidden"
-          } sm:flex flex-col sm:flex-row gap-5 sm:gap-10 font-bold items-center absolute sm:static top-full left-0 w-full sm:w-auto bg-white sm:bg-transparent p-5 sm:p-0 shadow-md sm:shadow-none z-40`}
+          } lg:flex flex-col lg:flex-row gap-5 lg:gap-10 font-bold items-center absolute lg:static top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent p-5 lg:p-0 shadow-md lg:shadow-none z-40`}
         >
           <li>
             <Link
@@ -80,6 +96,8 @@ const NavigationBar = () => {
               Home
             </Link>
           </li>
+
+          {/* Faculty Dropdown */}
           <li className="relative" ref={facultyRef}>
             <div
               className="flex items-center gap-1 text-lg hover:text-purple-700 cursor-pointer"
@@ -104,6 +122,8 @@ const NavigationBar = () => {
               </ul>
             )}
           </li>
+
+          {/* Pages Dropdown */}
           <li className="relative" ref={pagesRef}>
             <div
               className="flex items-center gap-1 cursor-pointer text-lg hover:text-purple-700"
@@ -199,7 +219,9 @@ const NavigationBar = () => {
             </Link>
           </li>
         </ul>
-        <div className="hidden sm:block absolute right-5 top-6">
+
+        {/* Search icon (desktop only) */}
+        <div className="hidden lg:block absolute right-5 top-6">
           <IoMdSearch size={30} className="cursor-pointer" />
         </div>
       </div>
