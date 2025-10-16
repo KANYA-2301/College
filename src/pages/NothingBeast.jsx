@@ -1,10 +1,10 @@
 import React from "react";
-import ABC from "../assets/ABC.jpg";
+import ABC from "../assets/nb.jpg";
 
 export default function NothingBeast() {
   return (
     <div
-      className="relative flex items-center justify-start bg-cover bg-center mt-20 py-20 px-6 md:px-16"
+      className="relative flex items-center justify-start bg-cover h-screen bg-center mt-20 py-20 px-6 md:px-16"
       style={{ backgroundImage: `url(${ABC})` }}
     >
       <div className="absolute inset-0 bg-fuchsia-400/30"></div>

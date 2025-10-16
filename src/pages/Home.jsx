@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import ApplyPageimg from '../assets/ApplyPageimg.jpg';
+import home_bg from '../assets/home_bg.jpg';
 import CampusIntro from './CampusIntro';
 import VisionMission from './VisionMission';
 import OurFacility from './OurFacility';
@@ -19,7 +19,7 @@ const ApplyPage = () => {
     <div className="w-full">
       <div
         className="relative w-full h-screen bg-cover bg-center flex items-center justify-start"
-        style={{ backgroundImage: `url(${ApplyPageimg})` }}
+        style={{ backgroundImage: `url(${home_bg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
         <div className="relative max-w-3xl w-full px-6 md:px-10 text-center md:text-left">

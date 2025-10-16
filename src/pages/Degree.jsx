@@ -1,5 +1,5 @@
 import React from "react";
-import Degreeimg from "../assets/Degreeimg.jpg";
+import Degreeimg from "../assets/dc.jpg";
 import {
   FaFlask,
   FaBalanceScale,
