@@ -62,16 +62,13 @@ const NavigationBar = () => {
           <FaTwitter />
         </div>
       </div>
-
-      {/* Main Nav */}
       <div className="p-4 lg:p-5 shadow-xl relative">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-4 md:gap-0">
-          {/* Logo */}
+    
           <Link to="/">
             <img src={logo} className="w-32 lg:w-40" alt="logo" />
           </Link>
 
-          {/* Hamburger for mobile */}
           <div className="lg:hidden">
             <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               {menuOpen ? (
@@ -82,7 +79,7 @@ const NavigationBar = () => {
             </button>
           </div>
 
-          {/* Menu */}
+
           <ul
             className={`${
               menuOpen ? "flex" : "hidden"
@@ -106,7 +103,7 @@ const NavigationBar = () => {
                 About Us
               </Link>
             </li>
-            {/* Academics Dropdown */}
+
             <li className="relative" ref={academicsRef}>
               <div className="flex items-center gap-1 text-lg hover:text-purple-700 cursor-pointer">
                 <Link to="/academics" onClick={() => setMenuOpen(false)}>Academics</Link>
@@ -135,8 +132,6 @@ const NavigationBar = () => {
                 </ul>
               )}
             </li>
-
-            {/* Faculty Dropdown */}
             <li className="relative" ref={facultyRef}>
               <div className="flex items-center gap-1 text-lg hover:text-purple-700 cursor-pointer">
                 <Link to="/faculty" onClick={() => setMenuOpen(false)}>Faculty</Link>
@@ -165,8 +160,6 @@ const NavigationBar = () => {
                 </ul>
               )}
             </li>
-
-            {/* Pages Dropdown */}
             <li className="relative" ref={pagesRef}>
               <div
                 className="flex items-center gap-1 text-lg hover:text-purple-700 cursor-pointer"
