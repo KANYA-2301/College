@@ -40,7 +40,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      <div className='mt-20 flex flex-col md:flex-row justify-center md:justify-around gap-10 px-4 md:px-20 flex-wrap'>
+      <div className='mt-20 grid md:grid-cols-3 grid-cols-1 justify-center md:justify-around gap-10 px-4 md:px-20 flex-wrap'>
         {contact_details.map((item,index) => (
           <div key={index} className='border border-[#dadada] p-10 w-full sm:w-80 md:w-72 lg:w-110 mx-auto'>
             <div className='bg-[#8e44ad] rounded-full w-16 h-16 sm:w-20 sm:h-20 mx-auto'>
