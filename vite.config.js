@@ -5,5 +5,5 @@ import tailwindcss from  '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(),tailwindcss()],
-  base: './',
+  base: 'https://github.com/KANYA-2301/College',
 })
