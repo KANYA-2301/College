@@ -18,7 +18,7 @@ const ApplyPage = () => {
   return (
     <div className="w-full">
       <div
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-start"
+        className="relative w-full h-screen bg-cover bg-fixed bg-center flex items-center justify-start"
         style={{ backgroundImage: `url(${home_bg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
