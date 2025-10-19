@@ -19,10 +19,7 @@ import Footer from '../Components/Footer'
 
 const Teachers = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleAnswer = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const toggleAnswer = (index) => setOpenIndex(openIndex === index ? null : index);
 
   const faculty = [
     { icon1:<FaFacebookF color='white' size="20"/>, icon2:<FaTwitter color='white' size="20"/>, icon3:<FaInstagram color='white' size="20"/>, icon4:<FaLinkedinIn color='white' size="20"/>, img:box1, name:"Carlos Bailey", position:"Chair of the Corporation" },
@@ -53,28 +50,23 @@ const Teachers = () => {
 
   return (
     <div>
-       <div>
-        <div 
-          style={{ backgroundImage: `url(${background})` }} 
-          className="bg-cover h-64 sm:h-80 md:h-96 bg-blend-soft-light bg-[#502d5f] bg-fixed flex flex-col justify-center items-center md:items-start text-center md:text-left px-4 sm:px-6 md:px-20"
-        >
-          <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            Teachers
-          </p>
-          <p className="border p-2 border-white text-white mt-3 sm:mt-5 flex gap-2 text-sm sm:text-base md:text-lg justify-center md:justify-start">
-            Home <SlArrowRight className="mt-1" /> Teachers
-          </p>
-        </div>
+      <div style={{ backgroundImage: `url(${background})` }} className="bg-cover h-64 sm:h-80 md:h-96 bg-blend-soft-light bg-[#502d5f] bg-fixed flex flex-col justify-center items-center md:items-start text-center md:text-left px-4 sm:px-6 md:px-20">
+        <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Teachers</p>
+        <p className="border p-2 border-white text-white mt-3 sm:mt-5 flex gap-2 text-sm sm:text-base md:text-lg justify-center md:justify-start">
+          Home <SlArrowRight className="mt-1" /> Teachers
+        </p>
       </div>
+
       <div className='px-5 sm:px-20 mt-5'>
         <p className='text-2xl sm:text-3xl font-bold'>Teachers & Staff</p>
         <p className='mt-2 flex gap-1 text-sm sm:text-lg items-center'>
           Home <IoIosArrowForward className='mt-1'/> Teachers
         </p>
       </div>
+
       <div className='flex flex-col md:flex-row justify-around mt-5 px-5 sm:px-20 gap-5'>
         <div className='md:w-1/2'>
-          <img src={bg} className='w-full sm:w-150 object-cover'></img>
+          <img src={bg} className='w-full sm:w-150 object-cover' alt="Teacher"/>
         </div>
         <div className='md:w-1/2 text-center md:text-left'>
           <p className='font-bold text-3xl sm:text-5xl'>About Teacher<br/>Teachers Dedicate Their Life To <br/>Providing Good Education</p>
@@ -86,6 +78,7 @@ const Teachers = () => {
           <button className='bg-[#8e44ad] text-white p-2 font-bold mt-5'>Discover More</button>
         </div>
       </div>
+
       <div className='mt-3 flex flex-col md:flex-row justify-around px-5 sm:px-20 gap-5'>
         <div>
           <p className='font-bold text-2xl sm:text-3xl'>Good Education Starts From Great<br/>Teachers</p>
@@ -98,6 +91,7 @@ const Teachers = () => {
           </p>
         </div>
       </div>
+
       <div className='flex flex-wrap justify-center gap-5 mt-8 px-5 sm:px-20'>
         {faculty.concat(faculty1).map((item, index) => (
           <div key={index} className='shadow-xl w-full sm:w-80 h-auto'>
@@ -109,7 +103,7 @@ const Teachers = () => {
                 <div className='w-10 h-10 bg-gray-500 flex justify-center items-center'>{item.icon4}</div>
               </div>
               <div>
-                <img src={item.img} className='w-32 sm:w-50 mt-5'></img>
+                <img src={item.img} className='w-32 sm:w-50 mt-5' alt={item.name}/>
               </div>
             </div>
             <p className='font-bold text-xl sm:text-2xl text-center mt-5'>{item.name}</p>
@@ -117,6 +111,7 @@ const Teachers = () => {
           </div>
         ))}
       </div>
+
       <div style={{ backgroundImage: `url(${bg2})` }} className="bg-cover bg-center bg-blend-soft-light bg-[#3c2644] bg-fixed h-auto sm:h-screen mt-10 relative">
         <div className="absolute inset-2 border border-white flex flex-col justify-center items-center text-center p-5 sm:p-10">
           <p className="text-2xl sm:text-4xl font-bold text-white leading-snug">
@@ -134,16 +129,15 @@ const Teachers = () => {
           </div>
         </div>
       </div>
+
       <div className='flex flex-wrap justify-center gap-5 mt-10 px-5 sm:px-20 relative md:bottom-30'>
         {feedback.map((item,index) => (
           <div key={index} className='shadow-lg p-5 w-full sm:w-95 bg-white'>
-            <div className='flex gap-2'>
-              {[...Array(5)].map((_, i) => <div key={i}>{item.rating}</div>)}
-            </div>
+            <div className='flex gap-2'>{[...Array(5)].map((_, i) => <div key={i}>{item.rating}</div>)}</div>
             <div className='relative top-5 left-2'>{item.quote}</div>
             <p className='text-[#727272]'>{item.desc}</p>
             <div className='flex gap-5 mt-5 items-center'>
-              <img src={item.image} className='w-12 h-12 sm:w-15 sm:h-15 rounded-full'></img>
+              <img src={item.image} className='w-12 h-12 sm:w-15 sm:h-15 rounded-full' alt={item.name}/>
               <div>
                 <p>{item.name}</p>
                 <p>{item.place}</p>
@@ -166,18 +160,11 @@ const Teachers = () => {
             const isOpen = openIndex === index;
             return (
               <div key={index} className='w-full border border-[#dadada] rounded-md overflow-hidden'>
-                <div
-                  className='p-3 flex items-center gap-3 cursor-pointer'
-                  onClick={() => toggleAnswer(index)}
-                >
-                  <div className='transition-transform'>
-                    {isOpen ? <IoRemoveSharp size={25} /> : <IoAddSharp size={25} />}
-                  </div>
+                <div className='p-3 flex items-center gap-3 cursor-pointer' onClick={() => toggleAnswer(index)}>
+                  <div className='transition-transform'>{isOpen ? <IoRemoveSharp size={25}/> : <IoAddSharp size={25}/>}</div>
                   <p className='text-xl font-bold'>{item.question}</p>
                 </div>
-                {isOpen && (
-                  <p className='p-5 text-[#727272] text-sm sm:text-base'>{item.answer}</p>
-                )}
+                {isOpen && <p className='p-5 text-[#727272] text-sm sm:text-base'>{item.answer}</p>}
               </div>
             );
           })}
@@ -187,6 +174,6 @@ const Teachers = () => {
       <Footer />
     </div>
   )
-};
+}
 
 export default Teachers;

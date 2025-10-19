@@ -33,16 +33,17 @@ const Contact = () => {
     <div>
       <div 
         style={{ backgroundImage: `url(${bg})` }} 
-        className="bg-cover bg-center md:bg-fixed bg-no-repeat h-60 sm:h-80 md:h-100 bg-blend-soft-light bg-[#502d5f] flex items-center">
+        className="bg-cover bg-center md:bg-fixed bg-no-repeat h-60 sm:h-80 md:h-[400px] bg-blend-soft-light bg-[#502d5f] flex items-center">
         <div className='px-4 sm:px-10 md:px-20'>
           <p className='text-white text-3xl sm:text-4xl md:text-5xl font-bold'>Contact Us</p>
-          <p className='border p-2 border-white text-white mt-3 sm:mt-4 md:mt-5 inline-flex items-center gap-2 font-bold text-sm sm:text-base md:text-lg'>Home <SlArrowRight className='mt-1' /> Contact
+          <p className='border p-2 border-white text-white mt-3 sm:mt-4 md:mt-5 inline-flex items-center gap-2 font-bold text-sm sm:text-base md:text-lg'>
+            Home <SlArrowRight className='mt-1' /> Contact
           </p>
         </div>
       </div>
       <div className='mt-20 grid md:grid-cols-3 grid-cols-1 justify-center md:justify-around gap-10 px-4 md:px-20 flex-wrap'>
         {contact_details.map((item,index) => (
-          <div key={index} className='border border-[#dadada] p-10 w-full sm:w-80 md:w-72 lg:w-110 mx-auto'>
+          <div key={index} className='border border-[#dadada] p-10 w-full sm:w-80 md:w-72 lg:w-[440px] mx-auto'>
             <div className='bg-[#8e44ad] rounded-full w-16 h-16 sm:w-20 sm:h-20 mx-auto'>
               <div className='flex justify-center items-center h-full'>
                 {item.icon}
@@ -54,7 +55,7 @@ const Contact = () => {
           </div>
         ))}
       </div>
-      <div className='border border-[#dadada] p-6 sm:p-10 w-full sm:w-160 mt-20 mx-auto'>
+      <div className='border border-[#dadada] p-6 sm:p-10 w-full sm:w-[640px] mt-20 mx-auto'>
         <p className='text-2xl sm:text-3xl md:text-3xl font-bold text-center sm:text-left'>Feel free to contact and<br/> reach us</p>
         <p className='mt-3 sm:mt-5 text-[#727272] text-base sm:text-lg text-center sm:text-left'>Imperdiet maecenas justo consectetuer leo duis. Praesent rutrum dui <br/>integer nostra primis morbi maximus dolor.</p>
         <form className='mt-5 flex flex-col gap-4'>

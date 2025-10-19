@@ -9,9 +9,8 @@ import p4 from '../assets/bg_blog6.jpg'
 import p5 from '../assets/bg_blog7.jpg'
 import { IoMdContact } from "react-icons/io";
 import { LuMessageCircleMore } from "react-icons/lu";
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaRegSquare } from "react-icons/fa";
 import { SlArrowRight } from "react-icons/sl";
-import { FaRegSquare } from "react-icons/fa";
 import Footer from '../Components/Footer'
 
 const SinglePost = () => {
@@ -35,18 +34,20 @@ const SinglePost = () => {
   return (
     <div className="overflow-x-hidden">
       <div style={{ backgroundImage: `url(${bg})` }} className="bg-cover bg-no-repeat bg-center min-h-[350px] bg-[#502d5f]/80 bg-blend-overlay flex flex-col justify-center px-6 sm:px-10 md:px-20 text-white text-center md:text-left bg-fixed">
-          <p className="text-2xl sm:text-3xl md:text-5xl font-bold leading-snug">Effective Learning Strategies to Foster<br className="hidden md:block" /> Growth and Excellence in Schools</p>
-          <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 mt-4 sm:mt-6 text-sm sm:text-base">
-            {detail.map((item, index) => (
-              <div key={index} className="flex gap-2 items-center">
-                {item.icon}
-                <p className="font-semibold">{item.name}</p>
-              </div>
-            ))}
-          </div>
+        <p className="text-2xl sm:text-3xl md:text-5xl font-bold leading-snug">Effective Learning Strategies to Foster<br className="hidden md:block" /> Growth and Excellence in Schools</p>
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 mt-4 sm:mt-6 text-sm sm:text-base">
+          {detail.map((item, index) => (
+            <div key={index} className="flex gap-2 items-center">
+              {item.icon}
+              <p className="font-semibold">{item.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="border border-[#f2f2f2] flex flex-col sm:flex-row flex-wrap justify-between gap-3 sm:gap-0 items-center px-4 sm:px-10 md:px-20 py-4 text-center sm:text-left">
-        <div className="flex flex-wrap justify-center sm:justify-start items-center gap-2 text-xs sm:text-sm md:text-base text-[#727272]">Home <SlArrowRight className="mt-[2px]" /> Blog <SlArrowRight className="mt-[2px]" /> Effective Learning Strategies to Foster Growth and Excellence in Schools</div>
+        <div className="flex flex-wrap justify-center sm:justify-start items-center gap-2 text-xs sm:text-sm md:text-base text-[#727272]">
+          Home <SlArrowRight className="mt-[2px]" /> Blog <SlArrowRight className="mt-[2px]" /> Effective Learning Strategies to Foster Growth and Excellence in Schools
+        </div>
         <button className="font-bold text-white bg-[#8e44ad] px-4 py-2 text-sm sm:text-base"># Seminar</button>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-4 sm:px-10 md:px-20 py-10">

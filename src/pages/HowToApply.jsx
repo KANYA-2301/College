@@ -36,22 +36,21 @@ const HowToApply = () => {
 
   return (
     <div>
-    <div 
-  style={{ backgroundImage: `url(${bg})` }} 
-  className="bg-cover bg-center bg-no-repeat  md:bg-fixed h-60 sm:h-80 md:h-100 bg-blend-soft-light bg-[#502d5f] flex items-center"
->
-  <div className='px-4 sm:px-10 md:px-20'>
-    <p className='text-white text-3xl sm:text-4xl md:text-5xl font-bold'>How To Apply</p>
-    <p className='border p-2 border-white text-white mt-3 sm:mt-4 md:mt-5 inline-flex items-center gap-2 font-bold'>
-      Home <SlArrowRight className='mt-1' /> How To Apply
-    </p>
-  </div>
-</div>
+      <div 
+        style={{ backgroundImage: `url(${bg})` }} 
+        className="bg-cover bg-center bg-no-repeat md:bg-fixed h-60 sm:h-80 md:h-100 bg-blend-soft-light bg-[#502d5f] flex items-center"
+      >
+        <div className='px-4 sm:px-10 md:px-20'>
+          <p className='text-white text-3xl sm:text-4xl md:text-5xl font-bold'>How To Apply</p>
+          <p className='border p-2 border-white text-white mt-3 sm:mt-4 md:mt-5 inline-flex items-center gap-2 font-bold'>
+            Home <SlArrowRight className='mt-1' /> How To Apply
+          </p>
+        </div>
+      </div>
 
-
-      <div className='flex flex-col md:flex-row justify-around ml-6 md:ml-30 mr-6 md:mr-30 mt-20 gap-10'>
-        <div className='md:w-1/2 mt-10'>
-            <p className='border w-30 p-1'>How to Apply</p>
+      <div className='flex flex-col md:flex-row justify-between px-6 md:px-20 mt-20 gap-10 items-start'>
+        <div className='flex-1 mt-10'>
+            <p className='border w-32 p-1'>How to Apply</p>
             <p className='font-bold text-4xl mt-5'>
               Here you'll find information on how to<br/> apply for Acadrova degrees and <br/>scholarships.
             </p>
@@ -63,14 +62,13 @@ const HowToApply = () => {
             </p>
             <div className='mt-10'>
                 <p className='text-xl'>
-                  We want to ensure that you have everything you need to make an informed decision<br/> 
-                  and that your admissions experience is a success.
+                  We want to ensure that you have everything you need to make an informed decision and that your admissions experience is a success.
                 </p>
             </div>
-            <button className='bg-[#8e44ad] font-bold text-white p-2 mt-10 w-40'>Dicover More</button>
+            <button className='bg-[#8e44ad] font-bold text-white p-2 mt-10 w-40'>Discover More</button>
         </div>
-        <div className='md:w-1/2 mt-10'>
-            <img src={img2} className='w-150 h-150'/>
+        <div className='md:w-1/2 mt-10 flex md:flex-none'>
+            <img src={img2} className='w-150 object-cover h-150' alt="Application process"/>
         </div>
       </div>
 
@@ -113,27 +111,23 @@ const HowToApply = () => {
       </div>
 
       <div 
-  style={{ backgroundImage: `url(${img3})` }} 
-  className="bg-cover bg-center bg-blend-soft-light bg-[#502d5f] mt-20 relative h-[800px] sm:h-[600px] md:h-[800px] md:top-54"
->
-  <div className='absolute top-[80px] left-[30px] sm:top-[40px] sm:left-[10px] md:top-[80px] md:left-[30px]'>
-    <p className='text-5xl sm:text-3xl md:text-5xl font-bold text-white leading-snug'>
-      Nothing Beats Good Education<br/>
-      For The Betterment Of A<br/>
-      Student’s Future
-    </p>
-    <p className='text-white mt-5 text-sm sm:text-xs md:text-lg leading-snug'>
-      Ipsum aenean inceptos nostra eleifend interdum tortor dictumst donec purus <br/>
-      ligula. Sociosqu dapibus iaculis in taciti egestas mauris. Rhoncus suscipit finibus<br/>
-      et donec imperdiet fermentum auctor.
-    </p>
-    <button className='bg-[#8e44ad] p-2 text-white font-bold mt-5 text-sm sm:text-xs md:text-sm'>Apply Now!</button>  
-  </div>
-</div>
-
-
-
-
+        style={{ backgroundImage: `url(${img3})` }} 
+        className="bg-cover bg-center bg-blend-soft-light bg-[#502d5f] mt-20 relative h-[800px] sm:h-[600px] md:h-[800px] md:top-54"
+      >
+        <div className='absolute top-[80px] left-[30px] sm:top-[40px] sm:left-[10px] md:top-[80px] md:left-[30px]'>
+          <p className='text-5xl sm:text-3xl md:text-5xl font-bold text-white leading-snug'>
+            Nothing Beats Good Education<br/>
+            For The Betterment Of A<br/>
+            Student’s Future
+          </p>
+          <p className='text-white mt-5 text-sm sm:text-xs md:text-lg leading-snug'>
+            Ipsum aenean inceptos nostra eleifend interdum tortor dictumst donec purus <br/>
+            ligula. Sociosqu dapibus iaculis in taciti egestas mauris. Rhoncus suscipit finibus<br/>
+            et donec imperdiet fermentum auctor.
+          </p>
+          <button className='bg-[#8e44ad] p-2 text-white font-bold mt-5 text-sm sm:text-xs md:text-sm'>Apply Now!</button>  
+        </div>
+      </div>
 
       <Footer/>
     </div>
